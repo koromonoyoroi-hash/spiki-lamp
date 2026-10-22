@@ -1,0 +1,285 @@
+.compact{padding:9px 12px;font-size:11px}.ghost-btn{background:rgba(255,255,255,.08);color:#e7eaff;border:1px solid var(--line)}.timer{font-size:clamp(58px,8vw,92px);color:#fff;text-shadow:0 0 30px rgba(168,176,255,.25)}.timer span{display:block}.ranking-grid{margin-top:16px}.ranking-card{padding:24px 28px}.ranking-columns{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:18px}.ranking-columns h3{font-size:13px;margin:0 0 10px;color:#c8cee2}.rank-row{display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;padding:10px 0;border-top:1px solid var(--line);font-size:12px}.rank-row span{color:var(--muted);font-family:'IBM Plex Mono',monospace}.rank-row strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rank-row small{color:var(--muted)}.rank-row b{font-family:'IBM Plex Mono',monospace;font-size:12px}.plus{color:#8df4b8}.minus{color:#ff8da8}.modal-copy{color:var(--muted);font-size:13px;margin:10px 0 22px}.modal-card>label{display:flex;flex-direction:column;gap:8px;color:#b7bfd8;font-size:12px;margin-bottom:22px}.modal-card select,.modal-card input{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 11px;background:#0c0f1c;color:#fff;outline:none}.modal-card .primary-btn{width:100%}.setting-grid input:disabled{color:#8a91a8;background:#111426}.server-notice{color:var(--muted);font-size:11px;min-height:16px}.info-card a{color:#9ea7ff}.ranking-card .section-heading{margin-bottom:3px}body:not(.spec-locked) #startupSpecModal{display:grid}@media(max-width:760px){.ranking-columns{grid-template-columns:1fr;gap:20px}.top-actions{gap:6px}.compact{font-size:10px}}
+
+/* PCアプリ版に寄せたレイアウト */
+:root{--orange:#c65800;--orange-dark:#a94700;--cream:#fff4e1;--ink:#5c2d0a}
+body{background:linear-gradient(135deg,#fff8ed 0,#f6efe4 48%,#e6ddd0 100%);color:var(--cream)}
+.app-shell{width:min(1040px,calc(100% - 24px));padding:24px 0 34px}
+.topbar{background:var(--orange);padding:18px 26px;margin-bottom:16px;border-radius:3px 3px 0 0}
+.eyebrow{color:#ffe2a9}.topbar h1{font-size:clamp(28px,4vw,42px);letter-spacing:.04em}.status-chip,.spec-badge{color:var(--cream);border-color:rgba(255,244,225,.55);background:rgba(92,45,10,.2)}
+.ghost-btn,.icon-btn{color:var(--ink);background:var(--cream);border:1px solid #e8b967;border-radius:2px}.icon-btn{font-size:18px}
+.hero-grid{grid-template-columns:320px 1fr;gap:30px;align-items:start}
+.panel{border:0;border-radius:0;background:var(--orange);box-shadow:0 7px 12px rgba(92,45,10,.25);backdrop-filter:none}
+.lamp-card{min-height:430px;padding:0 0 18px;justify-content:flex-start;background:var(--orange)}
+.lamp-card:before{display:none}.lamp-rim{width:320px;height:235px;aspect-ratio:auto;padding:0;border-radius:0;background:#000;box-shadow:none}
+.lamp-core{width:100%;height:100%;border-radius:0;background:#000 url('assets/img/大当たり前.png') center/contain no-repeat;box-shadow:none}
+.lamp-core.glow{background:#000 url('assets/img/大当たり後.png') center/contain no-repeat;box-shadow:none}
+.lamp-label{margin-top:14px;font-size:20px;letter-spacing:.05em;color:var(--cream)}.lamp-sub{color:#ffe0a5}.meter{background:rgba(92,45,10,.35);margin:14px 0 12px}.meter span{background:#ffe0a5}.lamp-foot{color:#ffe0a5}.lamp-foot strong{color:#fff;font-size:18px}
+.control-card{min-height:430px;padding:22px 28px;background:var(--orange)}.section-heading{color:#ffe0a5}.timer{margin:34px 0 0;color:var(--cream);text-shadow:none}.timer small{color:#ffe0a5}.stats-row div{border-color:rgba(255,244,225,.38);background:rgba(92,45,10,.16)}.stats-row span{color:#ffe0a5}.stats-row strong{color:#fff}
+.primary-btn{color:var(--ink);background:var(--cream);box-shadow:none;border-radius:2px}.bonus-btn{color:var(--ink);background:#e0aa2c;border-color:#ffe0a5;border-radius:2px}.hint{color:#ffe0a5}
+.lower-grid{grid-template-columns:320px 1fr;gap:30px;margin-top:18px}.history-card{grid-column:2;grid-row:1 / span 2;min-height:370px;padding:18px 20px;background:#fff;border:1px solid #aaa;box-shadow:none;color:#111}.history-card .section-heading{color:var(--orange)}.history-list{min-height:300px;align-content:flex-start;align-items:flex-start}.history-item{background:#fff;border-color:#ddd;color:#111}.info-card{grid-column:1;grid-row:1;padding:18px 20px;background:var(--orange);box-shadow:none}.info-card ol{color:var(--cream)}.note{color:#ffe0a5;border-color:#ffe0a5}.info-card a{color:#fff0bb}
+.ranking-grid{margin-top:18px}.ranking-card{background:var(--orange);padding:18px 20px}.ranking-columns h3{color:var(--cream)}.rank-row{border-color:rgba(255,244,225,.25)}
+.settings-links{margin:-8px 0 18px;font-size:12px}.settings-links a{color:#9ea7ff;text-decoration:none}.settings-links a:hover{text-decoration:underline}
+@media(max-width:760px){.hero-grid,.lower-grid{grid-template-columns:1fr}.history-card{grid-column:1;grid-row:auto}.info-card{grid-column:1;grid-row:auto}.lamp-rim{width:min(320px,100%)}.topbar{padding:16px}.control-card{min-height:390px}}
+
+/* 横長画面向けメイン配置 */
+.main-grid{display:grid;grid-template-columns:minmax(250px,1.1fr) minmax(210px,.8fr) minmax(270px,1.15fr);gap:16px;align-items:stretch}
+.visual-column{display:flex;flex-direction:column;gap:10px;min-width:0}
+.result-panel{padding:0;min-height:0;aspect-ratio:667/438;overflow:hidden;background:#fff;border:4px solid var(--orange);box-shadow:none}
+.result-panel img{display:block;width:100%;height:100%;object-fit:fill;background:#fff}
+.visual-column .lamp-card{min-height:0;height:auto;padding:0 0 8px;box-shadow:none}
+.visual-column .lamp-rim{width:100%;height:auto;aspect-ratio:930/676;padding:0}
+.visual-column .lamp-core{height:100%;background-size:contain}
+.visual-column .lamp-label{margin-top:5px;font-size:15px}
+.visual-column .lamp-sub,.visual-column .meter{display:none}
+.visual-column .lamp-foot{justify-content:center;padding:5px 8px;background:var(--orange)}
+.main-grid .control-card{min-height:100%;padding:12px 14px}
+.main-grid .timer{font-size:clamp(44px,6vw,88px);margin:10px 0 0}
+.main-grid .bonus-btn{min-height:68px;margin-top:8px;font-size:20px}
+.main-grid .stats-row{grid-template-columns:1fr;margin:12px 0}
+.main-grid .stats-row div{padding:9px}
+.main-grid .primary-btn{margin-top:4px}
+.main-grid .history-card{grid-column:auto;grid-row:auto;min-height:0;height:100%;align-self:stretch;padding:15px 16px;background:#fff;display:flex;flex-direction:column;overflow:hidden}
+.main-grid .history-list{flex:1 1 auto;min-height:0;height:auto;overflow-y:auto;overflow-x:hidden;align-content:flex-start}
+.lower-grid{grid-template-columns:1fr;margin-top:16px}
+.lower-grid .info-card{grid-column:1;grid-row:auto}
+.modal-back-btn{width:100%;margin-top:10px}
+@media(max-width:900px) and (orientation:landscape){.app-shell{width:calc(100% - 16px);padding-top:12px}.topbar{padding:12px 16px}.main-grid{gap:10px}.main-grid .control-card{padding:8px}.main-grid .bonus-btn{min-height:54px;font-size:16px}.main-grid .stats-row div{padding:6px}.main-grid .timer{font-size:clamp(40px,7vw,64px)}}
+@media(max-width:760px){body{overflow-x:auto}.app-shell{min-width:720px;width:720px;padding-left:8px;padding-right:8px}.main-grid{grid-template-columns:240px 210px 270px;gap:10px}.visual-column .lamp-rim{width:240px}.main-grid .history-card{min-height:310px;height:100%}.lower-grid{min-width:0}}
+
+/* PCアプリ版と同じ履歴表示 */
+.main-grid .history-card{font-family:Consolas,'Yu Gothic UI',monospace}
+.main-grid .history-card .section-heading{font-family:'Yu Gothic UI',sans-serif;font-size:16px;font-weight:700;letter-spacing:0;color:var(--orange)}
+.main-grid .history-card #hitCount{display:none}
+.main-grid .history-list{display:block;padding:10px 0 0;white-space:nowrap;overflow:auto}
+.main-grid .history-line{padding:2px 0;font-size:13px;font-weight:700;line-height:1.35;color:#000;border:0;background:#fff;border-radius:0}
+.main-grid .history-line.cost{margin-bottom:8px}
+.main-grid .history-line .history-payout{color:#000}
+.main-grid .history-line.big .history-type,.main-grid .history-line.big .history-payout{color:red}
+.main-grid .history-line.reg .history-type,.main-grid .history-line.reg .history-payout{color:#06c}
+.main-grid .history-line.chance .history-type,.main-grid .history-line.chance .history-payout{color:limegreen}
+.main-grid .history-line.normal .history-type,.main-grid .history-line.normal .history-payout{color:#000}
+
+/* 現在玉数を大きく、単位を数字の右側に表示 */
+.main-grid .stats-row strong{position:relative;display:block;min-height:36px;padding-right:42px;font-size:32px;line-height:1.1}
+.main-grid .stats-row strong #balls{display:block;color:#fff;font-size:32px;margin:0}
+.main-grid .stats-row strong small{position:absolute;right:0;bottom:3px;display:block;color:#ffe0a5;font-size:16px;margin:0}
+
+/* ランプ周辺の不要な補助表示を非表示 */
+.visual-column .lamp-label,.visual-column .lamp-sub,.visual-column .lamp-foot .muted,.visual-column .lamp-foot #missed{display:none}
+
+/* ウィンドウを小さくしたときは左下のランプだけ表示 */
+@media(max-width:520px), (max-height:360px){
+  body{overflow:hidden;background:var(--orange)}
+  .app-shell{min-width:0;width:100%;height:100vh;margin:0;padding:0}
+  .topbar,.result-panel,.control-card,.history-card,.lower-grid,.ranking-grid{display:none!important}
+  .main-grid{display:block;min-width:0;width:100%;height:100%;margin:0}
+  .visual-column{position:fixed;left:0;bottom:0;width:min(260px,58vw);display:block}
+  .visual-column .lamp-card{display:block;min-height:0;width:100%;padding:0;background:var(--orange);box-shadow:none}
+  .visual-column .lamp-rim{width:100%;height:auto;aspect-ratio:930/676;background:#000}
+  .visual-column .lamp-foot{display:none}
+}
+
+/* 参考画像に寄せた淡い黄緑・クリーム・ベージュ配色 */
+:root{--orange:#c9a574;--orange-dark:#a98255;--cream:#fff9ea;--ink:#765037}
+body{background:linear-gradient(135deg,#b6d878 0%,#dce9a9 42%,#fff8e8 100%);color:#765037}
+.topbar{background:#fff8e8;border:3px solid #d3b98a;border-radius:10px;box-shadow:0 6px 0 rgba(118,80,55,.18);color:#765037}
+.topbar h1{color:#765037}.eyebrow{color:#9c7850}.ghost-btn,.icon-btn{background:#fff8e8;color:#765037;border-color:#d3b98a}.status-chip,.spec-badge{color:#765037;border-color:#d3b98a;background:#f3e4c5}
+.main-grid .panel{border-color:#d3b98a;box-shadow:0 5px 12px rgba(118,80,55,.16)}
+.result-panel{border-color:#b9793b;background:#fffdf5}
+.main-grid .control-card{background:#f8edda;color:#765037}.section-heading{color:#9b754d}.timer{color:#765037}.timer small{color:#9b754d}
+.main-grid .bonus-btn{background:#d8b47e;color:#765037;border-color:#b98d58}.main-grid .bonus-btn:not(:disabled){animation:pulse-soft 1.3s infinite}
+.main-grid .stats-row div{background:#fff8e8;border-color:#d3b98a}.main-grid .stats-row span{color:#9b754d}.main-grid .stats-row strong{color:#765037}.main-grid .stats-row strong #balls{color:#765037}.main-grid .stats-row strong small{color:#9b754d}
+.main-grid .history-card{background:#fffdf5;border-color:#cdb78e}.main-grid .history-card .section-heading{color:#9b754d}.main-grid .history-line{background:#fffdf5;color:#765037}.main-grid .history-line.normal>span:last-child{color:#765037}
+.main-grid .primary-btn{background:#9acb59;color:#4f6c2b;border-color:#79a83d}.hint{color:#9b754d}
+.visual-column .lamp-foot{background:#c9a574;color:#fff9ea}.visual-column .lamp-foot strong{color:#fff9ea}
+.visual-column .result-panel,.visual-column .lamp-card{cursor:pointer}
+.modal{background:rgba(118,80,55,.28)}.modal-card{background:#fff8e8;border-color:#d3b98a;color:#765037}.modal-card select,.modal-card input,.setting-grid input,.setting-grid select{background:#fffdf5;color:#765037;border-color:#d3b98a}.modal-card>label,.setting-grid label{color:#765037}.settings-links a{color:#6c9b3d}
+@keyframes pulse-soft{50%{box-shadow:0 0 0 6px rgba(154,203,89,.22)}}
+@media(max-width:520px), (max-height:360px){body{background:#b6d878}}
+
+/* 極小ウィンドウでもランプの大きさは維持 */
+@media(max-width:520px), (max-height:360px){
+  .visual-column{width:260px;max-width:none}
+  .visual-column .lamp-rim{width:260px;min-width:260px;max-width:none}
+}
+
+.main-grid .detail-stats{margin-top:10px;color:#765037;font-size:13px;line-height:1.75;font-weight:700}
+.main-grid .detail-stats div{white-space:nowrap}
+.main-grid .detail-stats strong{color:#765037;font-size:14px}
+.main-grid .timer{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;justify-content:stretch;gap:0;width:100%;margin-top:0;text-align:center}
+.main-grid .timer span{font-family:'Yu Gothic UI','Meiryo',sans-serif;font-size:clamp(36px,5vw,66px);font-weight:900;letter-spacing:.02em}
+.main-grid .timer span{grid-column:2;grid-row:1;transform:translate(6px,-4px)}
+.main-grid .timer small{grid-column:1;grid-row:1;justify-self:start;order:0;margin:0;font-size:13px;white-space:nowrap;transform:translateY(-4px)}
+.main-grid .stats-row div{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:0;padding:7px 9px}
+.main-grid .stats-row div>span:first-child{grid-column:1;justify-self:start;display:inline;margin:0}
+.main-grid .stats-row strong{display:contents}
+.main-grid .stats-row strong #balls{grid-column:2;display:inline;justify-self:center}
+.main-grid .stats-row strong small{grid-column:3;position:static;display:block;justify-self:end;margin:0}
+.control-actions{display:flex;gap:8px;margin-top:16px}
+.control-actions button{flex:1}
+.creator-link{display:block;margin-top:auto;padding-top:9px;text-align:center;color:#9b754d;font-size:12px;text-decoration:none}
+.creator-link:hover{text-decoration:underline;color:#765037}
+.setting-grid{grid-template-columns:1fr}
+.fullscreen-btn{display:none}
+
+/* スマートフォン横画面ではメイン画面全体を表示 */
+@media (max-width:900px) and (orientation:landscape){
+  body{overflow:auto;background:linear-gradient(135deg,#b6d878 0%,#dce9a9 42%,#fff8e8 100%)}
+  .app-shell{min-width:0;width:calc(100% - 12px);height:calc(100vh - 12px);margin:0 auto;padding:6px 0}
+  .main-grid{display:grid!important;grid-template-columns:minmax(190px,1.1fr) minmax(180px,.9fr) minmax(220px,1.1fr);gap:8px;width:100%;height:100%;margin:0;align-items:stretch}
+  .visual-column{position:static;width:auto;height:100%;min-height:0;display:flex;flex-direction:column;gap:8px}
+  .visual-column .result-panel{display:block!important;flex:1 1 0;min-height:0;height:auto;aspect-ratio:auto}
+  .visual-column .lamp-card{display:flex!important;flex:1 1 0;flex-direction:column;width:100%;min-height:0;height:auto;padding:0 0 6px;background:var(--orange);box-shadow:none}
+  .visual-column .lamp-rim{width:100%;min-width:0;height:100%;min-height:0;aspect-ratio:auto}
+  .main-grid .control-card{display:flex!important;min-height:0;height:100%;padding:8px 10px;overflow-y:auto}
+  .main-grid .history-card{display:flex!important;height:100%;min-height:0}
+  .main-grid .timer{margin:0;padding:4px 0 8px;line-height:1}
+  .main-grid .timer span{font-size:clamp(34px,5vw,58px);line-height:.95;transform:translate(4px,0)}
+  .main-grid .timer small{font-size:12px;line-height:1;transform:none}
+  .main-grid .bonus-btn{min-height:52px;margin-top:4px;font-size:18px;padding:10px 12px}
+  .main-grid .stats-row{margin:8px 0}
+  .main-grid .stats-row div{padding:7px 8px}
+  .main-grid .detail-stats{margin-top:7px;font-size:12px;line-height:1.65}
+  .main-grid .detail-stats strong{font-size:13px}
+  .control-actions{margin-top:11px}
+  .lower-grid,.ranking-grid{display:none!important}
+  .fullscreen-btn{display:block;position:fixed;top:6px;right:6px;z-index:5;border:1px solid #d3b98a;border-radius:6px;padding:5px 9px;background:#fff8e8;color:#765037;font-size:11px}
+  .modal{padding:8px;align-items:center;overflow:auto}
+  .modal-card{width:min(560px,calc(100vw - 16px));max-height:calc(100vh - 16px);overflow-y:auto;padding:16px;border-radius:18px}
+  .modal-header{margin-bottom:12px}
+  .modal-header h2,.result-card h2{font-size:24px}
+  .setting-grid{gap:10px;margin-bottom:12px}
+  .setting-grid label{gap:5px}
+  .settings-links{margin:-2px 0 10px}
+  .modal-card .ghost-btn,.modal-card .primary-btn{padding:10px 12px}
+}
+.main-grid .history-line .history-type{display:inline-block;min-width:44px;margin-right:8px}
+.modal-card #saveSettings{margin-top:16px}
+.setting-control-row{display:flex;align-items:center;gap:10px}.setting-control-row input[type=range]{flex:1;min-width:0}.setting-control-row .ghost-btn{flex:0 0 110px;width:110px;height:34px;padding:8px 10px;font-size:11px;white-space:nowrap}
+.setting-label-row{display:flex;align-items:center;width:100%}.setting-slider-wrap{position:relative;display:flex;flex:1;min-width:0;flex-direction:column;align-items:stretch;padding-top:18px}.setting-slider-wrap span{position:absolute;top:0;right:0;line-height:1;align-self:auto}.setting-slider-wrap input[type=range]{width:100%;margin:0}
+.setting-control-row{position:relative;display:block;padding-top:0}.setting-control-row .setting-slider-wrap{display:block;width:calc(100% - 120px);padding:0}.setting-control-row .setting-slider-wrap span{top:-20px;right:0}.setting-control-row .setting-slider-wrap input[type=range]{display:block;width:100%;margin:0}.setting-control-row .ghost-btn{position:absolute;top:-22px;right:0}
+.visual-column .lamp-foot{display:flex!important;align-items:center;justify-content:center;height:34px;min-height:34px;line-height:1;padding:0 8px}
+.spec-modal-card{width:min(1080px,calc(100vw - 32px));background:#fff8e8;color:#765037}.spec-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:18px 0 28px}.spec-choice{display:flex;flex-direction:column;align-items:stretch;gap:8px;min-height:300px;padding:18px 20px;text-align:left;background:#fffdf5;color:#765037;border:3px solid #d3b98a;border-radius:2px;cursor:pointer}.spec-choice:hover{border-color:#c85c00}.spec-choice.selected{background:#ffe0a5;border-color:#765037;box-shadow:0 0 0 2px #c85c00}.spec-choice strong{width:100%;padding-bottom:10px;margin-bottom:2px;border-bottom:1px solid #d3b98a;font-size:19px}.spec-stat{display:grid;grid-template-columns:minmax(0,1fr) 78px;gap:8px;align-items:baseline;width:100%;font-size:14px;font-weight:600;line-height:1.25}.spec-stat span{min-width:0}.spec-stat b{font-weight:600;text-align:left;white-space:nowrap}.spec-start-btn{display:block;width:min(280px,100%);margin:0 auto}.spec-modal-card .modal-back-btn{display:block;width:min(280px,100%);margin:12px auto 0}@media(max-width:760px){.spec-cards{grid-template-columns:1fr;gap:12px}.spec-choice{min-height:0;padding:14px}.spec-stat{font-size:12px}}
+.main-grid .timer,.main-grid .timer span{font-size:58px}
+.main-grid .detail-stats div{display:grid;grid-template-columns:150px 1fr auto;column-gap:4px;align-items:baseline}
+.main-grid .detail-stats div>span:first-child{grid-column:1;white-space:nowrap}
+.main-grid .detail-stats div>strong{grid-column:2;justify-self:end;text-align:right;white-space:nowrap}
+.main-grid .detail-stats div>span:last-child{grid-column:3;white-space:nowrap}
+.result-stats div{display:flex;align-items:baseline;justify-content:center;gap:10px;padding:10px 8px;text-align:left}
+.result-stats span{order:1;display:inline;margin:0;white-space:nowrap}
+.result-stats strong{order:2;display:inline;white-space:nowrap}
+.result-actions .primary-btn{width:auto;padding:10px 16px;border:1px solid #d3b98a;border-radius:2px;background:#fff8e8;color:#765037;box-shadow:none}
+
+/* メイン画面は基準サイズを固定し、狭いウィンドウでは横スクロールで表示 */
+@media(min-width:521px){
+  body{overflow-x:auto}
+  .app-shell{width:1040px;min-width:1040px;max-width:none;margin:0 auto;padding:24px 0 34px}
+  .main-grid{width:1040px;min-width:1040px;grid-template-columns:364px 264px 380px;gap:16px;height:auto;align-items:stretch}
+  .visual-column{position:static;width:364px;height:auto;min-height:0;display:flex;flex-direction:column;gap:10px}
+  .visual-column .result-panel{display:block;flex:none;width:364px;height:auto;aspect-ratio:667/438}
+  .visual-column .lamp-card{display:flex;flex:none;width:364px;height:auto;min-height:0}
+  .visual-column .lamp-rim{width:364px;min-width:364px;height:auto;aspect-ratio:930/676}
+  .main-grid .control-card{height:auto;min-height:0}
+  .main-grid .history-card{height:auto;min-height:0}
+}
+
+/* 小さい画面では固定レイアウト全体を縮小して収める */
+html{background:#dce9a9!important}
+@media(max-width:1040px) and (min-width:521px){
+  body{overflow-x:hidden;overflow-y:auto;padding:4px;background:#dce9a9!important;touch-action:pan-y;-webkit-overflow-scrolling:touch}
+  .app-shell{zoom:calc((100vw - 8px) / 1155.56px);margin-left:0;margin-right:0}
+}
+
+/* 縦持ちスマホでもランプだけにせず、メイン画面全体を縮小表示 */
+@media(max-width:520px){
+  body{overflow-x:hidden;overflow-y:auto;padding:4px;background:#dce9a9!important;touch-action:pan-y;-webkit-overflow-scrolling:touch}
+  .app-shell{display:block!important;width:1040px;min-width:1040px;height:auto;margin:0;padding:24px 0 34px;zoom:calc((100vw - 8px) / 1155.56px)}
+  .main-grid{display:grid!important;width:1040px;min-width:1040px;height:auto;margin:0;grid-template-columns:364px 264px 380px;gap:16px;align-items:stretch}
+  .visual-column{position:static;width:364px;height:auto;min-height:0;display:flex;flex-direction:column;gap:10px}
+  .visual-column .result-panel{display:block!important;flex:none;width:364px;height:auto;aspect-ratio:667/438}
+  .visual-column .lamp-card{display:flex!important;flex:none;width:364px;height:auto;min-height:0;padding:0 0 8px}
+  .visual-column .lamp-rim{width:364px;min-width:364px;height:auto;aspect-ratio:930/676}
+  .main-grid .control-card{display:flex!important;height:auto;min-height:0}
+  .main-grid .history-card{display:flex!important;height:auto;min-height:0}
+}
+
+/* 左側の画像を10%縮小し、右側の枠を同じメイン画面の高さに揃える */
+@media(min-width:521px){
+  .app-shell{width:1004px;min-width:1004px}
+  .main-grid{width:1004px;min-width:1004px;grid-template-columns:328px 264px 380px}
+  .visual-column{width:328px}
+  .visual-column .result-panel{width:328px}
+  .visual-column .lamp-card{width:328px}
+  .visual-column .lamp-rim{width:328px;min-width:328px}
+}
+
+/* スマホ縦画面は、画像・操作パネル・履歴を縦に並べる */
+@media(orientation:portrait){
+  html,body{width:100%;min-width:0}
+  body{overflow-x:hidden;overflow-y:auto;padding:0;background:#dce9a9!important}
+  .modal{display:block;overflow-y:auto;overflow-x:hidden;padding:8px;touch-action:pan-y;-webkit-overflow-scrolling:touch}
+  .modal.hidden{display:none!important}
+  .modal-card{width:min(560px,calc(100vw - 16px));max-height:calc(100dvh - 16px);margin:0 auto;overflow-y:auto;overflow-x:hidden}
+  .spec-modal-card{width:min(1080px,calc(100vw - 16px));max-height:calc(100dvh - 16px);overflow-y:auto}
+  .app-shell{position:relative;left:0;width:100%!important;min-width:0!important;max-width:100%!important;height:auto;margin:0!important;padding:14px 0 20px;zoom:1}
+  .main-grid{display:flex!important;flex-direction:column;width:100%!important;min-width:0!important;max-width:100%!important;height:auto;gap:14px;align-items:center;margin-left:0!important;margin-right:0!important}
+  .visual-column{width:328px;height:auto;min-height:0;display:flex;flex:none;flex-direction:column;gap:10px}
+  .visual-column .result-panel{display:block!important;flex:none;width:328px;height:auto;aspect-ratio:667/438}
+  .visual-column .lamp-card{display:flex!important;flex:none;width:328px;height:auto;min-height:0;padding:0 0 8px}
+  .visual-column .lamp-rim{width:328px;min-width:328px;height:auto;aspect-ratio:930/676}
+  .visual-column .lamp-foot{display:flex!important;flex:none;width:100%;height:34px;justify-content:center;align-items:center;padding:5px 8px}
+  .main-grid .control-card{display:flex!important;flex:none;width:328px;height:505px;min-height:505px;padding:12px 14px}
+  .main-grid .history-card{display:flex!important;flex:none;align-self:center;width:328px;height:505px;min-height:505px}
+}
+
+/* 狭いウィンドウでは固定幅画面を左端から表示して、右側へのずれを防ぐ */
+@media(max-width:1600px) and (min-width:761px){
+  .app-shell{margin-left:0!important;margin-right:0!important}
+}
+
+/* 固定レイアウトの外側が狭い場合も、画面右側へ寄せない */
+html body .app-shell{margin-left:0!important;margin-right:0!important}
+@media(min-width:761px){
+  html body .app-shell{margin-left:20px!important;margin-right:0!important}
+}
+@media(max-width:520px){
+  .app-shell{width:1004px;min-width:1004px}
+  .main-grid{width:1004px;min-width:1004px;grid-template-columns:328px 264px 380px}
+  .visual-column{width:328px}
+  .visual-column .result-panel{width:328px}
+  .visual-column .lamp-card{width:328px}
+  .visual-column .lamp-rim{width:328px;min-width:328px}
+}
+
+/* 縦画面の最終上書き（狭い画面用の固定幅指定より優先） */
+@media(orientation:portrait){
+  html,body{width:100%;min-width:0}
+  body{overflow-x:hidden;overflow-y:auto;padding:0;background:#dce9a9!important}
+  .app-shell{position:relative;left:0;width:100%!important;min-width:0!important;max-width:100%!important;height:auto;margin:0!important;padding:14px 0 20px;zoom:1}
+  .main-grid{display:flex!important;flex-direction:column;width:100%!important;min-width:0!important;max-width:100%!important;height:auto;gap:14px;align-items:center;margin:0!important}
+  .visual-column{width:328px;height:auto;min-height:0;display:flex;flex:none;flex-direction:column;gap:10px}
+  .visual-column .result-panel{display:block!important;flex:none;width:328px;height:auto;aspect-ratio:667/438}
+  .visual-column .lamp-card{display:flex!important;flex:none;width:328px;height:auto;min-height:0;padding:0 0 8px}
+  .visual-column .lamp-rim{width:328px;min-width:328px;height:auto;aspect-ratio:930/676}
+  .visual-column .lamp-foot{display:flex!important;flex:none;width:100%;height:34px;justify-content:center;align-items:center;padding:5px 8px}
+  .main-grid .control-card{display:flex!important;flex:none;width:328px;height:505px;min-height:505px;padding:12px 14px}
+  .main-grid .history-card{display:flex!important;flex:none;align-self:center;width:328px;height:505px;min-height:505px}
+  .modal{display:block;overflow-y:auto;overflow-x:hidden;padding:8px;touch-action:pan-y;-webkit-overflow-scrolling:touch}
+  .modal.hidden{display:none!important}
+  .modal-card{width:min(560px,calc(100vw - 16px));max-height:calc(100dvh - 16px);margin:0 auto;overflow-y:auto;overflow-x:hidden}
+  .spec-modal-card{width:min(1080px,calc(100vw - 16px));max-height:calc(100dvh - 16px);overflow-y:auto}
+  .result-card{width:calc(100vw - 16px)!important;max-width:560px;padding:20px 16px}
+  .result-stats{grid-template-columns:1fr;gap:6px;margin:16px 0}
+  .result-stats div{justify-content:space-between;padding:8px 10px}
+  .result-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .result-actions button{width:100%!important}
+  .result-actions #resultSpecBtn{grid-column:1 / -1}
+}
+
+@media(orientation:portrait){
+  .visual-column .lamp-card{padding-bottom:0}
+  .visual-column .lamp-foot{height:42px;min-height:42px;padding:0;align-items:center;justify-content:center;line-height:1}
+}
+
+.settings-links{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.settings-links .ghost-btn{flex:0 0 auto}
